@@ -1,5 +1,6 @@
 import { Stars,Float,Stage , OrbitControls } from '@react-three/drei'
 import Spaceship from './Component/Spaceship'
+import MovingStars from './Component/Stars'
 
 
 export default function Experience()
@@ -7,11 +8,11 @@ export default function Experience()
 
     return <>
 
-        <color args={['black'] } attach={'background'} />
+        <color args={['#0f0f0f'] } attach={'background'} />
 
         <OrbitControls makeDefault />
 
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={10} />
+        <MovingStars/>
 
         <Stage
         shadows={false}
