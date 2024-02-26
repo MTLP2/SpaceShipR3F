@@ -8,7 +8,7 @@ function MovingStars() {
   useFrame(() => {
     // Cela déplace les étoiles horizontalement
     // Tu peux ajuster la vitesse de défilement en modifiant la valeur
-    starRef.current.rotation.y += 0.0;
+    starRef.current.rotation.y += 0.00;
   });
 
   return (
