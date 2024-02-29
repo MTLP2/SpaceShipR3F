@@ -8,15 +8,16 @@ import { Vector3 } from 'three';
 
 
 export default function Experience() {
+  const lookAtTarget = useRef(new Vector3(0, 0, 1));
   const [speedFloat, setspeedFloat] = useState(0)
-  const { camera, gl } = useThree();
+  const { camera } = useThree();
   const textRef = useRef();
   const timeline = gsap.timeline();
 
   useFrame(()=>{
     gsap.to(textRef.current, {
       y: 200,
-      color:'yellow',
+      color:'#edac17',
       opacity:1,
       duration: 3,
       delay: 7
@@ -34,13 +35,12 @@ export default function Experience() {
       gsap.to(floatAnim, {
         onUpdate: () => setspeedFloat(1), // Met à jour speedFloat progressivement
       });
-    }, 5000); // Délai de 5 secondes
+    }, 9000); // Délai de 9 secondes
 
     return () => clearTimeout(timeoutId); // Nettoie le timeout si le composant est démonté
   }, []);
 
 
-  const lookAtTarget = useRef(new Vector3(0, 0, 1));
 
   useEffect(() => {
     // Animer la position de la cible
@@ -66,7 +66,7 @@ export default function Experience() {
     // Créer une timeline GSAP
 
     // Exemple d'animation: déplace la caméra sur l'axe Z
-    timeline.to(camera.position, {
+    gsap.to(camera.position, {
       x: -60,
       y: 5,
       duration: 5,
@@ -84,13 +84,7 @@ export default function Experience() {
   return (
     <>
       <color args={['#0f0f0f']} attach="background" />
-
-
-
-
       <MovingStars />
-
-
         <directionalLight intensity={3} position-y={2}/>
         <pointLight color={'white'} intensity={5000} position-y={30} position-z={40}/>
         <Float floatIntensity={10} speed={speedFloat}   >
