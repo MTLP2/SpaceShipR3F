@@ -1,14 +1,26 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 
 function MovingStars() {
   const starRef = useRef();
+  const [startRotating, setStartRotating] = useState(false);
+
+
+  useEffect(() => {
+    // Définit un délai avant de commencer la rotation
+    const timeoutId = setTimeout(() => {
+      setStartRotating(true);
+    }, 9000); // Délai de 5 secondes
+
+    return () => clearTimeout(timeoutId); // Nettoie le timeout si le composant est démonté
+  }, []);
 
   useFrame(() => {
-    // Cela déplace les étoiles horizontalement
-    // Tu peux ajuster la vitesse de défilement en modifiant la valeur
-    starRef.current.rotation.y += 0.00;
+    if (startRotating) {
+      // Une fois le délai passé, commence à augmenter la rotation
+      starRef.current.rotation.y += 0.04;
+    }
   });
 
   return (

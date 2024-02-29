@@ -2,6 +2,8 @@ import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
+import Audio from './Component/Audio.jsx';
+
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -12,10 +14,11 @@ root.render(
             fov: 45,
             near: 0.1,
             far: 2000,
-            position: [ -3, 1.5, 4 ]
+            position: [ 0.4, 0, -25 ]
         } }
     >
         <Experience />
     </Canvas>
+    <Audio/>
     </>
 )
