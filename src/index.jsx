@@ -59,6 +59,7 @@ const App = () => {
                         <ContainerInfo imgInfo={'/img/photoExp4.png'} infoText={`
                         Pour améliorer l'immersion et l'expérience utilisateur dans mon projet React Three Fiber (R3F), j'ai enrichi la scène avec l'ajout soigneusement                        planifié de lumières et d'effets sonores. Les lumières, comprenant à la fois des sources ponctuelles (Point Light) pour simuler des éclairages                      diffus dans toutes les directions, et des lumières directionnelles (Directional Light) pour créer des effets de lumière parallèle imitant le                    soleil, ont été stratégiquement positionnées pour mettre en valeur le vaisseau spatial et d'autres éléments de la scène, ajoutant ainsi profondeur                  et réalisme.`}/>
                     </div>
+                    <a href="https://matheolopes.com" className='portfolioLink'></a>
                 </>
             )}
         </div>
