@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Float, Html } from '@react-three/drei';
+import { Float, Html, OrbitControls, Stage } from '@react-three/drei';
 import Spaceship from './Component/Spaceship';
 import MovingStars from './Component/Stars';
 import gsap from 'gsap';
@@ -87,11 +87,11 @@ export default function Experience() {
       <MovingStars />
         <directionalLight intensity={3} position-y={2}/>
         <pointLight color={'white'} intensity={5000} position-y={30} position-z={40}/>
-        <Float floatIntensity={10} speed={speedFloat}   >
-          <Spaceship />
-        </Float>
+          <Float floatIntensity={10} speed={speedFloat}   >
+            <Spaceship />
+          </Float>
         <Html position-y={30} position-x={20} position-z={100} transform scale={1.5}>
-          <div ref={textRef}  style={{ transform: 'scale(-10, 10)', color: "white", textAlign:'center', opacity:0}}>
+          <div ref={textRef}  style={{ transform: 'scale(-10, 10)', color: "white", textAlign:'center', opacity:0, userSelect: 'none'}}>
             <h1 >SPACESHIP <br /> EXPERIENCE</h1>
           </div>
         </Html>
