@@ -34,6 +34,6 @@ export default function Audio() {
   }, []);
 
   return (
-    <div>Audio Component</div> // Ce div peut être utilisé pour afficher des contrôles ou des informations sur l'audio
+    <div></div> // Ce div peut être utilisé pour afficher des contrôles ou des informations sur l'audio
   );
 }

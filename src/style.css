@@ -77,3 +77,37 @@ body,
 .button:hover{
     transform: scale(1.2);
 }
+
+.sectionInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 300px;
+    width: 100%;
+    padding: 20px;
+    background-color: #0f0f0f;
+}
+
+.containerInfo{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(53, 53, 53);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: rgb(225, 225, 225);
+    font-size: 20px;
+    text-align: justify;
+    line-height: 24px;
+    padding-right: 20px;
+    height: 500px;
+    gap: 30px;
+    width: 1300px;
+}
+
+.containerInfo img{
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+}

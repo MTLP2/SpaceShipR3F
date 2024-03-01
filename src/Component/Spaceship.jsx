@@ -6,8 +6,8 @@ import { Color } from 'three';
 export default function Spaceship() {
   const spaceshipRef = useRef();
   const { scene } = useGLTF('/SpaceShip.glb');
-  const [reactorIntensity, setReactorIntensity] = useState(0); // Nouveau
-  const [colorIntensity, setcolorIntensity] = useState(0); // Nouveau
+  const [reactorIntensity, setReactorIntensity] = useState(0); 
+  const [colorIntensity, setcolorIntensity] = useState(0); 
   const [targetPositionY, setTargetPositionY] = useState(0); // Déclaration de l'état targetPositionY
   const [enableMouseMove, setEnableMouseMove] = useState(false); // État pour activer/désactiver le contrôle de la souris
 
